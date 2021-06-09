@@ -1,3 +1,3 @@
 <?php $titre = "Accueil"; 
 
-require "./src/common/template.php";
+require "src/common/template.php";

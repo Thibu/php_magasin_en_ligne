@@ -1,0 +1,58 @@
+PARTIE 01
+
+1 Réaliser la scritp sql pour insérer les colonnes dans notre base de données magasin X
+2 Dans l'application, créer dossier: X
+src/img X
+src/common/template.php X
+src/common/header.php X
+3 src/common/template.php X
+coder la page html type avec title = $titre X
+importer header.php X
+4 src/common/template.php X
+coder le header avec logo de l'entreprise d'un coté et menu de l'autre. Importer scritp font awasome sur template.php X
+ajouter les logo à la nav du header.php X
+5 creer src/css + style.css X
+mettre en forme le header X
+
+6 Créer src/pages/register.php X
+coder un formulaire qui comprendra les champs nécéssaire à créer le user dans notre db; X
+inserer deux entrées dans la colonne user (admin et client) X
+mettre en forme le formulaire X
+
+7 Créer src/fonctions/dbFonction.php X
+coder la requete sql pour envoyer user dans db X
+
+8 src/pages/register.php X
+importer dbFonctions.php X
+traiter le formulaire et appeler la fonction createuser 
+
+9. src/fonctions/dbFonction.php
+Ajouter avant de creer le user, la vérification si le login ou l'email n'est pas déjà pris
+si tel est le cas, simuler un get error et prévoir sur register.php un endroit pour traiter l'erreur
+
+PARTIE 02
+
+1. creer src/pages/login.php
+inclure titre et header.php
+
+2 créer en html le formulaire pour se loguer (login et mot de pass)
+de préférence utiliser la même structure que sur register pour éviter de recoder du css
+
+3 src/fonctions/dbFonction.php
+coder la fonction getUserByLogin
+
+4 src/pages/login.php
+traiter le formulaire.
+Si le user est correctement identifié, creer des session pour encapsuler les données utile et modifier le menu du header pour afficher
+un menu plus pertinent
+sur register.php et login.php si $session["connecté"] existe, rediriger vers acceuil
+
+5 src/common/header.php
+Rajouter un bouton pour se déconnecter et traiter la demande
+
+
+
+
+
+
+

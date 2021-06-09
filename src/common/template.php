@@ -9,7 +9,8 @@
 </head>
 <body>
 
-    <?php include "./src/common/header.php" ?>
+    <?php require "header.php"; ?>
+    
     
 </body>
 </html>

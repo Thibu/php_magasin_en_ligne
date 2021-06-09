@@ -1,7 +1,7 @@
 <nav class="navbar is-info" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="#">
-      <img src="./src/img/main_logo.jpg" width="112" height="28">
+      <img src="../../src/img/main_logo.jpg" width="112" height="28">
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -47,7 +47,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
+          <a class="button is-primary" href="../../src/pages/register.php">
             <strong>Sign up</strong>
           </a>
           <a class="button is-light">
