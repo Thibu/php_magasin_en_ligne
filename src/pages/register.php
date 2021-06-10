@@ -1,14 +1,19 @@
 <?php 
     $title = "Inscription";
+    session_start();
     require "../../src/common/template.php";
     require "../../src/fonctions/dbFonctions.php" 
 ?>
 <?php 
+    if($_SESSION["connecte"]){
+        header("location: ../../index.php?error=true&message=vous etes déjà connecté");
+        exit();
+    }
     if(isset($_POST["login"]) && isset($_POST["email"]) && isset($_POST["mdp"]) && isset($_POST["mdp2"])){
         
         if($_POST["mdp"] != $_POST["mdp2"]){
-            header("location: ../../src/pages/register.php?error=true&message=mots de passe différents");
-            exit;
+            header("location: ../../src/pages/register.php?error=true&message=Les mots de passe ne correspondent pas");
+            exit();
         }
 
         //sanetization des données:
@@ -37,47 +42,28 @@
 
 
 
-    <form action="../../src/pages/register.php" method="post" class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center container column ">
+    <form action="../../src/pages/register.php" method="post" class="container col-4">
     <?php 
     
         if((isset($_GET["error"]) && $_GET["error"] == true) || (isset($_GET["error"]) && $_GET["error"] === false)){
             echo '<h2>'.$_GET["message"].'</h2>';
         }
     ?>
-    <div class="field column is-4 m-0">
-        <label class="label">Login</label>
-        <div class="control">
-            <input class="input" name="login" type="text" value="">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Login</label>
+            <input type="text" name="login" class="form-control" >
         </div>
-    </div>
-
-    <div class="field column is-4 m-0">
-        <label class="label">Mot de passe</label>
-        <div class="control">
-            <input class="input" name="mdp" type="password" value="">
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+            <input type="password" name="mdp" class="form-control">
         </div>
-    </div>
-
-    <div class="field column is-4 m-0">
-        <label class="label">Confirmez votre mot de passe</label>
-        <div class="control">
-            <input class="input" name="mdp2" type="password" value="">
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Verification du mot de passe</label>
+            <input type="password" name="mdp2" class="form-control">
         </div>
-    </div>
-
-    <div class="field column is-4 m-0">
-        <label class="label">Email</label>
-        <div class="control">
-            <input class="input" name="email" type="email" value="">
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control">
         </div>
-    </div>
-
-    <div class="field is-grouped m-0">
-        <div class="control">
-            <button class="button is-link">Submit</button>
-        </div>
-        <div class="control">
-            <button class="button is-link is-light">Cancel</button>
-        </div>
-    </div>
-</form>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>

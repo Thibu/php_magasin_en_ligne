@@ -24,32 +24,31 @@ coder la requete sql pour envoyer user dans db X
 
 8 src/pages/register.php X
 importer dbFonctions.php X
-traiter le formulaire et appeler la fonction createuser 
+traiter le formulaire et appeler la fonction createuser X
 
-9. src/fonctions/dbFonction.php
-Ajouter avant de creer le user, la vérification si le login ou l'email n'est pas déjà pris
-si tel est le cas, simuler un get error et prévoir sur register.php un endroit pour traiter l'erreur
+9. src/fonctions/dbFonction.php X
+Ajouter avant de creer le user, la vérification si le login ou l'email n'est pas déjà pris X
+si tel est le cas, simuler un get error et prévoir sur register.php un endroit pour traiter l'erreur X
 
 PARTIE 02
 
-1. creer src/pages/login.php
-inclure titre et header.php
+1. creer src/pages/login.php X
+inclure titre et header.php X
 
-2 créer en html le formulaire pour se loguer (login et mot de pass)
-de préférence utiliser la même structure que sur register pour éviter de recoder du css
+2 créer en html le formulaire pour se loguer (login et mot de pass) X
+de préférence utiliser la même structure que sur register pour éviter de recoder du css X
 
-3 src/fonctions/dbFonction.php
-coder la fonction getUserByLogin
+3 src/fonctions/dbFonction.php X
+coder la fonction getUserByLogin X
 
-4 src/pages/login.php
-traiter le formulaire.
-Si le user est correctement identifié, creer des session pour encapsuler les données utile et modifier le menu du header pour afficher
-un menu plus pertinent
-sur register.php et login.php si $session["connecté"] existe, rediriger vers acceuil
+4 src/pages/login.php X
+traiter le formulaire. X
+Si le user est correctement identifié, creer des session pour encapsuler les données utile et modifier le menu du header pour afficher X
+un menu plus pertinent X
+sur register.php et login.php si $session["connecté"] existe, rediriger vers acceuil X
 
-5 src/common/header.php
-Rajouter un bouton pour se déconnecter et traiter la demande
-
+5 src/common/header.php X
+Rajouter un bouton pour se déconnecter et traiter la demande X
 
 
 

@@ -33,4 +33,26 @@ function createUser($login, $email, $password, $key)
     exit();
 };
 
+function getUserByLogin($login){
+    
+    $bdd = bdd();
+    $requete = $bdd->prepare("SELECT login, password FROM users
+                                WHERE login = ?");
+    $requete->execute([$login]);
+    // var_dump($result);
+    $result = $requete->fetch();
+    
+    return $result;
+    }
+
+function recupMdp($login){
+    $bdd = bdd();
+
+    $requete = $bdd->prepare("SELECT ban FROM users
+                                WHERE login = ?");
+    $requete->execute(array($login));
+    $ban = $requete->fetch();
+
+    return $ban;
+}
 ?>
