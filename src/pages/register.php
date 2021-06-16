@@ -34,9 +34,10 @@
         //Cryptage du mdp
         
         $key = rand();
+        $mdpHash = password_hash($mdp, PASSWORD_DEFAULT);
 
         $mdpCrypt = crypt($mdp, $key);
-        createUser($login, $email, $mdpCrypt, $key);
+        createUser($login, $email, $mdpHash);
     }
     ?>
 

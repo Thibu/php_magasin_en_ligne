@@ -1,0 +1,18 @@
+PARTIE 3
+
+1. créer src/common/listCatégorie.php et
+src/common/derniersArticles.php
+src/common/promotion.php
+
+promotion.php
+coder en dur 5 vignettes promotionnelle
+
+2 listCatégorie.php coder en dur une liste fictive de catégorie d'article informatique
+
+3 derniersArticles.php
+coder une card qui comprendra l'image de l'article, sa catégorie, le nom de l'article et le début d'une courte description
+reproduire 9 fois cette card et mettre en forme en css
+
+
+4 src/common/footer.php
+Créer un mini footer que l'on enrichira en fin de module si le temps le permet

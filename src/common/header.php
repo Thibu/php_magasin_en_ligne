@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img id="main_logo" src="../../src/img/main_logo.jpg" alt=""></a>
+    <a class="navbar-brand" href="../../index.php"><img id="main_logo" src="../../src/img/main_logo.jpg" alt=""></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,14 +10,14 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="../../src/common/promotions.php">Promotions</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="../../src/common/derniersArticles.php">Derniers Articles</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -26,6 +26,9 @@
       </ul>
       <form class="d-flex">
       <?php 
+        if(($_SESSION["roleId"]) === "1"): ?>
+          <a class="btn btn-outline-primary me-1" href="../../src/pages/admin.php">Admin</a>
+        <?php endif;
         if($_SESSION["connecte"] == true): ?>
           <a class="btn btn-outline-danger me-1" href="../../src/fonctions/logout.php">Disconnect</a>
           <a class="btn btn-outline-success" href="../../src/pages/account.php">My account</a>

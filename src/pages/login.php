@@ -24,14 +24,16 @@
         $login = $result["login"];
         $mdp = $result["mdp"];
         
-        $key = recupMdp($login);
-        $mdpCrypt = crypt($mdp, $key[0]);
+        // $mdpHash = recupMdp($login);
+        // $mdpCrypt = crypt($mdp, $key[0]);
 
         $loging = getUserByLogin($login);
-
-        if($login === $loging["login"] && $mdpCrypt === $loging["password"] ){
+  
+        if($login === $loging["login"] && password_verify($mdp, $loging["password"])){
             $_SESSION["connecte"] = true;
             $_SESSION["login"] = $login;
+            $_SESSION["roleId"] = $loging["roleId"];
+
             header("location: ../../index.php?error=false&message=Vous etes maintenant connecté");
             exit();
         }else{

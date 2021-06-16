@@ -5,7 +5,7 @@ function bdd()
     return $bdd;
 };
 
-function createUser($login, $email, $password, $key)
+function createUser($login, $email, $password)
 {
     $bdd = bdd();
 
@@ -23,10 +23,10 @@ function createUser($login, $email, $password, $key)
         }
     }
 
-    $stmt = $bdd->prepare("INSERT INTO users(login, email, password, ban) 
-                            VALUES(?, ?, ?, ?)");
+    $stmt = $bdd->prepare("INSERT INTO users(login, email, password) 
+                            VALUES(?, ?, ?)");
 
-    $stmt->execute([$login, $email, $password, $key]) 
+    $stmt->execute([$login, $email, $password]) 
     or die(print_r($stmt->errorInfo(), TRUE));
 
     header("location: ../../src/pages/register.php?error=false&message=Votre compte est bien créer, veuillez vous connecter");
@@ -36,7 +36,7 @@ function createUser($login, $email, $password, $key)
 function getUserByLogin($login){
     
     $bdd = bdd();
-    $requete = $bdd->prepare("SELECT login, password FROM users
+    $requete = $bdd->prepare("SELECT login, password, roleId FROM users
                                 WHERE login = ?");
     $requete->execute([$login]);
     // var_dump($result);
@@ -45,14 +45,14 @@ function getUserByLogin($login){
     return $result;
     }
 
-function recupMdp($login){
-    $bdd = bdd();
+// function recupMdp($login){
+//     $bdd = bdd();
 
-    $requete = $bdd->prepare("SELECT ban FROM users
-                                WHERE login = ?");
-    $requete->execute(array($login));
-    $ban = $requete->fetch();
+//     $requete = $bdd->prepare("SELECT ban FROM users
+//                                 WHERE login = ?");
+//     $requete->execute(array($login));
+//     $ban = $requete->fetch();
 
-    return $ban;
-}
-?>
+//     return $ban;
+// }
+// ?>

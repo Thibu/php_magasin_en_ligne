@@ -1,0 +1,31 @@
+PARTIE 4
+1 créer src/pages/admin
+header.php rajouter un lien vers la page admin si le user connecté est admin
+src/pages/admin importer le template et le footer
+
+2 creer src/pages/adminContent/menuAdmin.php
+coder un menu en ligne qui comprendra le bouton ajouter produit et un bouton catégorie de produit
+intégrer ce menu sous le menu principal
+
+
+3 creer src/pages/adminContent/categorieProduit.php
+creer dbCategorieFonctions.php  et coder la requete pour récupérer la liste des catégorie déjà existante
+categorieProduit.php lister les catégorie déjà existante, créer un bouton pour faire apparaître le formulaire pour ajouter un nouveau produit
+dans dbCategorieFonctions.php coder la requete pour envoyer la nouvelle catégorie de produit
+
+4 creer src/pages/adminContent/ajouterproduit.php
+coder le formulaire qui permet d'ajouter un produit.
+pour la description du produit, foncton nl2br(htmlspecialchars($description)) 
+pour prendre en compte les passage à la ligne
+ 
+5 créer dbProduitsFonctions.php et coder la requete pour envoyer un nouveau produit dans la base de données
+Par facilité, créer une focntion qui va rechercher l'id d'une catégorie selon le nom de cette catégorie
+
+ATTENTION, la requete doit se faire en 3 temps:
+envoyer fichier photo dans repertoire img/produit (coder la fonction sendImg dans le fichier src/fonctions/mesFonctions.php (a créer)
+si ok
+envoyer productname, imgurl, description, categoryId et onTop dans la table product
+envoyer le reste des données dans la table fiche technique en ayant soin de récupérer au préalable l'id du produit que nous venons d'envoyer dans la table product
+require ce fichier sur ajouterproduit.php et tester si l'envoi se fait
+
+6 Encoder 6 nouveaux produit que vous envoyez à la une
