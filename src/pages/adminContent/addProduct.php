@@ -1,8 +1,4 @@
-<?php 
-    $result = getCategorie();
-?>
-
-<form class="container" method="POST" action="../../../src/fonctions/ajoutProduitFonction.php">
+<form class="container" method="POST" action="../../../src/fonctions/ajoutProduitFonction.php" enctype='multipart/form-data'>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Nom du produit</label>
     <input type="text" name="productName" class="form-control" id="">
@@ -64,11 +60,9 @@
         <option value="<?php echo $value["categoryId"] ?>"><?php echo $value["typeProduct"] ?></option>
         <?php endforeach ?>
   </select>
-  <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" name="onTop" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
-    On Top
-  </label>
+  <div class="form-check form-switch">
+    <input class="form-check-input" name="onTop" type="checkbox" id="flexSwitchCheckDefault">
+    <label class="form-check-label" for="flexSwitchCheckDefault">onTop</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
