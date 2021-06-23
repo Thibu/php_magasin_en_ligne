@@ -11,6 +11,8 @@ function fiveOnTop(){
                                 INNER JOIN fichetechnique ft
                                 on ft.productId = p.productId
                                 WHERE p.onTop = 1
+                                ORDER BY p.productId
+                                DESC
                                 LIMIT 5");
     $requete->execute([]);
     $result = $requete->fetchAll(PDO::FETCH_OBJ);
