@@ -44,8 +44,8 @@
     ?>
 
 
-
-    <form action="" method="post" class="container col-4">
+<section class="container col-3 shadow p-3 mb-3 mt-3 bg-body rounded">
+    <form action="" method="post" class="container">
     <?php 
     
         if((isset($_GET["error"]) && $_GET["error"] == true) || (isset($_GET["error"]) && $_GET["error"] === false)){
@@ -53,13 +53,15 @@
         }
     ?>
 
-<div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Login</label>
-            <input type="text" name="login" class="form-control" >
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-            <input type="password" name="mdp" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Login</label>
+                <input type="text" name="login" class="form-control" >
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                <input type="password" name="mdp" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+</section>

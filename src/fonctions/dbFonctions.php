@@ -1,10 +1,6 @@
 <?php 
-function bdd()
-{
-    $bdd = new PDO("mysql:host=localhost;dbname=pcshop", "root", "");
-    return $bdd;
-};
-
+    require "dbAccess.php";
+    
 function createUser($login, $email, $password)
 {
     $bdd = bdd();

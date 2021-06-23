@@ -10,6 +10,8 @@ require "../../src/fonctions/dbCategorieFonctions.php";
     if(isset($_GET["addCategorie"]) && $_GET["addCategorie"] == true){
         require "../../src/pages/adminContent/categorieProduit.php";
     }
+    if(isset($_GET["addProduct"]) && $_GET["addProduct"] == true){
     require "adminContent/addProduct.php";
+    }
     require "../common/footer.php";
     ?>

@@ -1,14 +1,15 @@
 <?php 
-    session_start();
-    require "../../src/common/template.php";
-
+    require "./src/fonctions/dbCategorieFonctions.php";
 ?>
-<section class="container">
-    <div class="list-group">
-    <button type="button" class="list-group-item list-group-item-action">Pc portable</button>
-    <button type="button" class="list-group-item list-group-item-action">Pc portable gaming</button>
-    <button type="button" class="list-group-item list-group-item-action">Pc fixe</button>
-    <button type="button" class="list-group-item list-group-item-action">Pc fixe gaming</button>
-    <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros</button>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse d-flex justify-content-around" id="navbarNav">
+      <ul class="navbar-nav">
+        <?php foreach (getCategorie() as $value): ?>
+          <li class="nav-item"><a class="btn btn-outline-secondary nav-link" href="../src/pages/categories.php?displayCat&id=<?php echo $value["categoryId"] ?>"><?php echo $value["typeProduct"]; ?></a></li>
+        <?php endforeach; ?>
+      </ul>
     </div>
-</section>
+  </div>
+</nav>
