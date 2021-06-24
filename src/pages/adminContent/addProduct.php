@@ -1,4 +1,33 @@
-<form class="container bg-white" method="POST" action="../../../src/fonctions/ajoutProduit.php" enctype='multipart/form-data'>
+<?php
+  require "../../src/fonctions/ajoutProduitFonction.php";
+  
+  if(isset($_POST["productName"])){
+    $onTop = 0;
+    if(isset($_POST["onTop"])){
+    $onTop = 1;
+}
+    addNewProduct(
+      $_POST["categoryID"],
+      $_POST["productName"],
+      $_FILES["imgUrl"],
+      $_POST["productPrice"],
+      $_POST["productRam"],
+      $_POST["productProco"],
+      $_POST["productFabProco"],
+      $_POST["productScreenResol"],
+      $_POST["productScreenSize"],
+      $_POST["productGraphicCard"],
+      $_POST["productTypeStorage"],
+      $_POST["productStoragePlace"],
+      $_POST["productWeight"],
+      $_POST["productOS"],
+      $_POST["productDesc"],
+      $onTop
+    );
+  }
+?>
+
+<form class="container bg-white" method="POST" action="" enctype='multipart/form-data'>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Nom du produit</label>
     <input type="text" name="productName" class="form-control" id="">
@@ -64,5 +93,5 @@
     <input class="form-check-input" name="onTop" type="checkbox" id="flexSwitchCheckDefault">
     <label class="form-check-label" for="flexSwitchCheckDefault">onTop</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary mb-2">Ajouter<span> <i class="fas fa-arrow-alt-circle-up"></i></span></button>
 </form>

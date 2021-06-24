@@ -3,14 +3,18 @@
     require "../fonctions/dbAccess.php";
     require "../fonctions/dbProduitFonctions.php";
     require "../common/template.php";
-    $value = articleById($_GET["id"])
+    $value = articleById($_GET["id"]);
+    if(empty($value["productName"]) || empty($value["typeProduct"])){
+        header("location: ../../index.php?error=1&message=Ce produit n'existe pas.");
+        exit();
+    }
 ?>
     <section class="articleId container bg-white">
         <h2><?php echo $value["productName"] ?></h2>
         <p><?php echo $value["processeurFab"].' '.$value["processeur"].' '.$value["carteGraphique"].' '.$value["typeHdd"].' '.$value["tailleHdd"].' '.$value["OS"] ?></p>
-        <div class="d-flex flex-lg-wrap flex-row">
+        <div class="d-flex flex-wrap flex-row justify-content-between">
             <div class="img_container col-5">
-                <img class="img-fluid" src="<?php echo $value["imgUrl"]?>" alt="">
+                <img class="img-fluid my-2" src="<?php echo $value["imgUrl"]?>" alt="">
             </div>
             <div class="d-flex flex-column col-7">
                 <div class="">
@@ -62,6 +66,10 @@
                         <tr>
                         <th scope="row">Capacité de stockage</th>
                         <td colspan="2"><?php echo $value["tailleHdd"] ?>G</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Poid</th>
+                        <td colspan="2"><?php echo $value["poids"] ?>Kg</td>
                         </tr>
                         <tr>
                         <th scope="row">OS</th>

@@ -6,36 +6,20 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="../../src/common/promotions.php">Promotions</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="../../src/common/derniersArticles.php">Derniers Articles</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li> -->
+        
       </ul>
       <form class="d-flex">
       <?php 
         if(($_SESSION["roleId"]) === "1"): ?>
-          <a class="btn btn-outline-primary me-1" href="../../src/pages/admin.php">Admin</a>
+          <a class="btn btn-outline-primary me-1" href="../../src/pages/admin.php">Admin<span> <i class="fab fa-angellist"></i></span></a>
         <?php endif;
         if($_SESSION["connecte"] == true): ?>
-          <a class="btn btn-outline-danger me-1" href="../../src/fonctions/logout.php">Disconnect</a>
-          <a class="btn btn-outline-success" href="../../src/pages/account.php">My account</a>
+          <a class="btn btn-outline-danger me-1" href="../../src/fonctions/logout.php">Disconnect<span> <i class="fas fa-sign-out-alt"></i></span></a>
+          <a class="btn btn-outline-success" href="#">My account<span> <i class="fas fa-user-circle"></i></span></a>
         <?php endif;
         if($_SESSION["connecte"] != true): ?>
-          <a class="btn btn-outline-success me-1" href="../../src/pages/login.php">Log in </a>
-          <a class="btn btn-outline-success" href="../../src/pages/register.php">Sign in</a>
+          <a class="btn btn-outline-success me-1" href="../../src/pages/login.php">Log in<span> <i class="fas fa-sign-in-alt"></i></span></a>
+          <a class="btn btn-outline-success" href="../../src/pages/register.php">Sign in<span> <i class="fas fa-file"></i></span></a>
         <?php endif; ?>
       </form>
     </div>

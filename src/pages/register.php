@@ -41,9 +41,7 @@
     }
     ?>
 
-
-
-    <form action="../../src/pages/register.php" method="post" class="container col-4">
+    <form action="../../src/pages/register.php" method="post" class="container col-4 bg-light">
     <?php 
     
         if((isset($_GET["error"]) && $_GET["error"] == true) || (isset($_GET["error"]) && $_GET["error"] === false)){

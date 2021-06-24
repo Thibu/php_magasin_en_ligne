@@ -13,7 +13,7 @@
     <div class="d-flex justify-content-around flex-wrap mt-3">
         <?php 
         foreach (articleByCat($_GET["id"]) as $value): ?>
-                <div class="card_last_article card mx-5 my-1">
+                <div class="shadow p-3 mb-5 bg-body rounded card_last_article card mx-5 my-1">
                     <img class="card-img-top" src="<?php echo $value->imgUrl ?>" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $value->productName ?></h5>

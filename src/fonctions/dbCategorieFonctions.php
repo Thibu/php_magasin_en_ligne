@@ -1,5 +1,5 @@
 <?php  
-    require "dbAccess.php";
+    // require "dbAccess.php";
 
     function getCategorie(){
 

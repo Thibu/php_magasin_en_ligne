@@ -5,7 +5,7 @@
     <h2>Nos promotions :</h2>
     <div class="d-flex justify-content-around flex-wrap">
         <?php foreach (fiveOnTop() as $value): ?>
-            <a class="card card_promo my-2" href="../../src/pages/article.php?Article&id=<?php echo $value->productId ?>">
+            <a class="shadow-sm p-3 mb-5 bg-body rounded card card_promo my-2" href="../../src/pages/article.php?Article&id=<?php echo $value->productId ?>">
                 <img class="card-img-top" src="<?php echo $value->imgUrl ?>" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title"></h5>

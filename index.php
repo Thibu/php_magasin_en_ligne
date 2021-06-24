@@ -7,6 +7,7 @@ if(!isset($_SESSION["connecte"])){
 };
 
 // require "src/fonctions/dbAccess.php";
+require "src/fonctions/dbAccess.php";
 require "src/common/template.php"; ?>
 
 

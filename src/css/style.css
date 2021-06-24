@@ -2,7 +2,11 @@
     max-height: 1.5rem;
 }
 body{
-    background: url("../img/bg-2.jpg");
+    background: url("../img/8TzHYjGhzOwunsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 .card_promo{
     overflow: hidden;
@@ -26,7 +30,7 @@ body{
     border-radius: 50% 20% / 90% 40%;
     margin: 0;
     padding: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     background-color: rgba(73, 73, 68, 0.753);
     color: rgb(255, 255, 255);
 }

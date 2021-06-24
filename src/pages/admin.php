@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require "../../src/fonctions/dbAccess.php";
 require "../../src/fonctions/dbCategorieFonctions.php";
     if($_SESSION["roleId"] != "1"){
         header("location: ../index.php?error=true&message=Vous n'avez rien à faire ici !");

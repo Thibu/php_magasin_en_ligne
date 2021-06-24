@@ -50,7 +50,8 @@ function articleByCat($id){
                                 INNER JOIN fichetechnique ft
                                 on ft.productId = p.productId
                                 WHERE c.categoryId = ?
-                                ORDER BY p.productId");
+                                ORDER BY p.productId
+                                DESC ");
     $requete->execute([$id]);
     $result = $requete->fetchAll(PDO::FETCH_OBJ);
 
