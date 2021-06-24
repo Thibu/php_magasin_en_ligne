@@ -12,8 +12,8 @@
     <section class="articleId container bg-white">
         <h2><?php echo $value["productName"] ?></h2>
         <p><?php echo $value["processeurFab"].' '.$value["processeur"].' '.$value["carteGraphique"].' '.$value["typeHdd"].' '.$value["tailleHdd"].' '.$value["OS"] ?></p>
-        <div class="d-flex flex-wrap flex-row justify-content-between">
-            <div class="img_container col-5">
+        <div class="d-flex flex-wrap flex-row justify-content-center">
+            <div class="img_container col-sm-5 col-12">
                 <img class="img-fluid my-2" src="<?php echo $value["imgUrl"]?>" alt="">
             </div>
             <div class="d-flex flex-column col-7">

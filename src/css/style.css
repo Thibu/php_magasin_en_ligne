@@ -35,14 +35,20 @@ body{
     color: rgb(255, 255, 255);
 }
 .card_last_article{
-    
+    text-align: left !important;
     width: 18rem;
 }
 .card_last_article img{
     max-height: 13rem;
     
 }
+.card_last_article h5{
+    font-family: 'Ubuntu', sans-serif;
+}
 .articleId .img_container{
     max-height: 30rem;
     max-width: 30rem;
+}
+.prix{
+    margin-bottom: 0;
 }
