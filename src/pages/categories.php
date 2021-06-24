@@ -9,7 +9,7 @@
     include "../common/template.php";
 ?>
 <section class="container bg-white">
-    <h2>Nos nouveautés</h2>
+    <h2>Résultats:</h2>
     <div class="d-flex justify-content-around flex-wrap mt-3">
         <?php 
         foreach (articleByCat($_GET["id"]) as $value): ?>
@@ -20,7 +20,7 @@
                         <p class="card-text"><?php echo $value->description ?></p>
                         <p class="categorie"><?php echo $value->typeProduct ?></p>
                         <p class="prix"><?php echo $value->prix ?>€</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="article.php?Article&id=<?php echo $value->productId ?>" class="btn btn-primary">Vers l'article</a>
                     </div>
                 </div>
             <?php endforeach 

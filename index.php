@@ -6,22 +6,23 @@ if(!isset($_SESSION["connecte"])){
     $_SESSION["roleId"] = null;
 };
 
+// require "src/fonctions/dbAccess.php";
 require "src/common/template.php"; ?>
 
 
  <div class="container bg-light">
     <div>
-        <?php include "src/common/listCategorie.php" ?>
+        <?php require "src/common/listCategorie.php" ?>
     </div>
     <div>
         <?php 
             if((isset($_GET["displayCat"])) && (isset($_GET["id"]))){
 
-                include "src/pages/categories.php";
+                require "src/pages/categories.php";
             }else{
                 
-                include "src/common/promotions.php";
-                include "src/common/derniersArticles.php";
+                require "src/common/promotions.php";
+                require "src/common/derniersArticles.php";
             }
         ?>
     </div>

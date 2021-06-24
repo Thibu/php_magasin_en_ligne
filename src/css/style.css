@@ -21,16 +21,24 @@ body{
     max-height: 13rem;
 }
 .card_promo p{
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: #FC0 1px 0 10px;
+    border-radius: 50% 20% / 90% 40%;
     margin: 0;
     padding: 0.5rem;
     font-size: 1.5rem;
-    background-color: rgba(255, 255, 128, .5);
-    color: rgb(187, 10, 10);
+    background-color: rgba(73, 73, 68, 0.753);
+    color: rgb(255, 255, 255);
 }
 .card_last_article{
+    
     width: 18rem;
 }
 .card_last_article img{
     max-height: 13rem;
     
+}
+.articleId .img_container{
+    max-height: 30rem;
+    max-width: 30rem;
 }

@@ -10,7 +10,7 @@
                         <p class="card-text"><?php echo $value->description ?></p>
                         <p class="categorie"><?php echo $value->typeProduct ?></p>
                         <p class="prix"><?php echo $value->prix ?>€</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="../../src/pages/article.php?Article&id=<?php echo $value->productId ?>" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             <?php endforeach 
